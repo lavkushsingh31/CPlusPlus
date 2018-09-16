@@ -45,7 +45,7 @@ void selectionSort(struct student a[], int l)
 {
     for(int i=0;i<l;i++)
     {
-        int index = i, temp;
+        int index = i; struct student temp;
         for(int j=i+1;j<l;j++)
         {
             if(a[index].rollno>a[j].rollno)
@@ -53,9 +53,9 @@ void selectionSort(struct student a[], int l)
                 index=j;
             }
         }
-        temp = a[i].rollno;
-        a[i].rollno=a[index].rollno;
-        a[index].rollno=temp;
+        temp = a[i];
+        a[i]=a[index];
+        a[index]=temp;
     }
 }
 
